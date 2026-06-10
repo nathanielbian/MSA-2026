@@ -15,9 +15,12 @@ def main():
     hours_worked_daily = collect_data("hours worked daily", 24)
     hourly_wage = collect_data("hourly wage", float("inf"))
 
-    wages_before_taxes = hours_worked_daily * hourly_wage * 350
-    tax_amount = wages_before_taxes * .12
-    annual_wages_after_taxes = wages_before_taxes * .88
+    tax_rate = .12
+    days_worked = 350
+
+    wages_before_taxes = hours_worked_daily * hourly_wage * days_worked
+    tax_amount = wages_before_taxes * tax_rate
+    annual_wages_after_taxes = wages_before_taxes - tax_amount
 
     print("\nPay Advice\n------------------")
     print(f"Hours worked: {hours_worked_daily:,.2f} hours")
