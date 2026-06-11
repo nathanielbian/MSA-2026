@@ -9,15 +9,12 @@ def main():
     amount_due = 50
     valid_coins = ["1", "5", "10", "25"]
 
-    while True:
+    while amount_due > 0:
         print(f"Amount Due: {amount_due}")
         coin = input("Insert Coin:\n")
         
         if coin in valid_coins:
             amount_due -= int(coin)
-
-            if amount_due <= 0:
-                break
 
     print(f"Change Owed: {amount_due * -1}")
 
