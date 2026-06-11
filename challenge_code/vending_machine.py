@@ -1,13 +1,13 @@
-# Create a variable for amount owed and a list of valid coins
-# Create a continual loop where the user is asked to input a coin
-# Check if the entered coin is valid, and then decrease the amount owned by that amount and continue the loop
-# Once the amount owed is less than or equal to 0, break the loop and take the negative of amount owed as the change owed to user
+# Initialize a variable for amount owed and a set of valid coins
+# Create a loop which runs while the amount owed is greater than 0 where the user is continually asked of inputs
+# Check if the entered coin is in the set of valid coins, and then decrease the amount owned by that amount
+# After the loop ends, output the negative of amount owed as the change owed to user
 
 def main():
     print("Vending Machine\n----------------")
 
     amount_due = 50
-    valid_coins = ["1", "5", "10", "25"]
+    valid_coins = {"1", "5", "10", "25"}
 
     while amount_due > 0:
         print(f"Amount Due: {amount_due}")
