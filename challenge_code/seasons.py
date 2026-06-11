@@ -29,9 +29,9 @@ def main():
     if month in range(3, 6):
         print("The season is spring.")
     elif month in range(6, 9):
-        print("The season is spring.")
+        print("The season is summer.")
     elif month in range(9, 12):
-        print("The season is spring.")
+        print("The season is fall.")
     else:
         print("The season is winter.")
 
