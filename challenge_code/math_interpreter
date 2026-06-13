@@ -1,0 +1,38 @@
+def main():
+    while True:
+        expression = input("Expression: ")
+        data = expression.split(" ")
+
+        if len(data) != 3:
+            print("Error: Please use the correct formatting!")
+            continue
+
+        try:
+            value_1 = int(data[0])
+            value_2 = int(data[2])
+        except:
+            print("Error: Please enter a valid number!")
+            continue
+
+        operator = data[1]
+
+        if operator == "+":
+            print(f"{expression} = {(value_1 + value_2):.2f}")
+        elif operator == "-":
+            print(f"{expression} = {(value_1 - value_2):.2f}")
+        elif operator == "*":
+            print(f"{expression} = {(value_1 * value_2):.2f}")
+        elif operator == "/":
+            if value_2 == 0:
+                print("Error: Can not divide by 0!")
+                continue
+
+            print(f"{expression} = {(value_1 / value_2):.2f}")
+        else:
+            print("Error: Invalid operator!")
+            continue
+
+        if input("Would you like to evaluate another expression (y to continue): ").lower() != "y":
+            break
+
+main()
